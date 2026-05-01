@@ -1,3 +1,6 @@
+
+/Users/mriduldhungana/Documents/secondsem/pythonfords2/DATA3402.Spring.2026/Kaggle project/UTA-DataScience-Logo.png
+
 # 📡 Telco Customer Churn Prediction
 
 A machine learning project to predict whether a telecom customer will churn, built on a fictional dataset of 7,043 California customers from Q3.
@@ -91,7 +94,7 @@ Final Model Selection
 |---|---|---|
 | Logistic Regression | ~1.00 | ~0.91 |
 
-**Drop confirmed.** A ~0.09 AUC drop shows it was doing all the heavy lifting artificially. Removing it gives a model that would actually work in production, where satisfaction scores aren't available before churn.
+**Drop confirmed** A ~0.09 AUC drop shows it was doing all the heavy lifting artificially. Removing it gives a model that would actually work in production, where satisfaction scores aren't available before churn.
 
 ---
 
