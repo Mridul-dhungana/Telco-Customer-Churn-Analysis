@@ -246,6 +246,9 @@ The data doesnot seem to be linear, rather both the models hit the same **perfor
 ---
 
 ##  Final Model — Logistic Regression
+
+<img width="789" height="590" alt="ROC_AUC" src="https://github.com/user-attachments/assets/3a1c09e3-8780-4797-9ef8-9e118dccfe4b" />
+
 Logistic Regression was selected as the final model. It was not because the data was linear  but rather because it **matches XGBoost's performance** with far less complexity. It is 
 faster to train, deploy, cheaper to run and requires no hyperparameter tuning.
 
