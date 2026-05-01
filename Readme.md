@@ -66,7 +66,7 @@ Final Model Selection
 
 | Column | Reason |
 |---|---|
-| `Churn Score` | Generated after churn — pure leakage |
+| `Churn Score` | Generated after churn - pure leakage |
 | `Customer Status` | Directly encodes the target |
 | `Churn Category` | Post-event, 70% missing |
 | `Churn Reason` | Post-event, 70% missing |
@@ -85,7 +85,7 @@ Final Model Selection
 
 ## Leakage Investigation — Satisfaction Score
 
-`Satisfaction Score` was investigated separately because it correlated very strongly with churn. A quick test proved it was a **post-event proxy** — a survey filled out after the customer had already decided to leave:
+`Satisfaction Score` was investigated separately because it correlated very strongly with churn. Creating a model with it showed that the model became too accurate and the goal of predicting churn without even knowing the satisfaction score was not achieved. 
 
 | Model | AUC with Satisfaction Score | AUC without |
 |---|---|---|
@@ -101,7 +101,7 @@ Final Model Selection
 
 | Feature | Observation |
 |---|---|
-| Tenure | Churners have significantly lower tenure — newer customers churn more |
+| Tenure | Churners have significantly lower tenure; newer customers churn more |
 | Monthly Charge | Churners pay more on average |
 | Total Charges | Lower for churners due to shorter tenure |
 | Age | Older customers churn slightly more |
@@ -133,7 +133,7 @@ Stratified split used throughout to preserve the 73/27 class ratio in all sets.
 
 ### Scaling
 
-`StandardScaler` is fitted **only on the training set**, then applied (transform only) to val and test — no data leakage.
+`StandardScaler` is fitted **only on the training set**, then applied (transform only) to val and test; this ensures there is no data leakage.
 
 ---
 
@@ -212,23 +212,17 @@ Three metrics were investigated to understand why both models achieved identical
 
 | Metric | Value | Interpretation |
 |---|---|---|
-| Probability correlation | 0.957 | High but not identical — models learned **similar but different** patterns |
-| Trees used by XGBoost | 925 | XGBoost worked hard — this is **not** a lazy or undertrained model |
-| Top 3 feature importance | 40.5% | Importance spread across many features — **no single feature dominates** |
+| Probability correlation | 0.957 | High but not identical; this means models learned **similar but different** patterns |
+| Trees used by XGBoost | 925 | XGBoost worked hard, this is **not** a lazy or undertrained model |
+| Top 3 feature importance | 40.5% | Importance spread across many features, **no single feature dominates** |
 
-**Conclusion:** The data is not simply linear. Both models hit the same **performance ceiling of ~0.91** that exists in this dataset after removing Satisfaction Score. The remaining behavioral features collectively cap predictive power at ~0.91 — both models reach that ceiling through different learned patterns.
-
+**Conclusion:** The data doesnot seem to be linear, rather both the models hit the same **performance ceiling of ~0.91** that exists in this dataset after removing Satisfaction Score. The remaining behavioral features collectively cap predictive power at ~0.91.
 ---
 
 ##  Final Model — Logistic Regression
 
-Logistic Regression was selected as the final model — not because the data is linear, but because it **matches XGBoost's performance** with far less complexity:
-
-- Faster to train and deploy
-- Cheaper to run in production
-- Coefficients are directly interpretable by business stakeholders
-- No hyperparameter tuning overhead
-
+Logistic Regression was selected as the final model. It was not because the data was linear  but rather because it **matches XGBoost's performance** with far less complexity. It is 
+faster to train, deploy, cheaper to run and requires no hyperparameter tuning.
 ---
 
 ## Requirements
