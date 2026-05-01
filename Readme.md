@@ -95,6 +95,9 @@ Final Model Selection
 | Logistic Regression | ~1.00 | ~0.91 |
 
 **Drop confirmed** A ~0.09 AUC drop shows it was doing all the heavy lifting artificially. Removing it gives a model that would actually work in production, where satisfaction scores aren't available before churn.
+<img width="585" height="455" alt="LR with satisfaction" src="https://github.com/user-attachments/assets/5c444373-f2a4-4f30-af6b-7cc3c91b479b" />
+<img width="1389" height="390" alt="Satisfaction" src="https://github.com/user-attachments/assets/5a606290-c55c-43a7-b1d4-061f3cb75b9d" />
+
 
 ---
 
