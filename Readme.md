@@ -115,6 +115,8 @@ Final Model Selection
 | Total Charges | Lower for churners due to shorter tenure |
 | Age | Older customers churn slightly more |
 
+<img width="1389" height="390" alt="Tenure" src="https://github.com/user-attachments/assets/4a1ef5d2-7c75-45cb-9d23-cc8b31453772" />
+
 ### Key Findings — Categorical Features
 
 | Feature | Observation |
@@ -126,6 +128,7 @@ Final Model Selection
 | Gender | No meaningful difference — contributes little |
 
 ---
+<img width="1507" height="408" alt="Contract" src="https://github.com/user-attachments/assets/0a7cd071-b4db-405b-980f-def0c5c3d5bd" />
 
 ## Modeling
 
