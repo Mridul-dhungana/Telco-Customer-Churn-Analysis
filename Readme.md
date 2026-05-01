@@ -8,6 +8,18 @@ A machine learning project to predict whether a telecom customer will churn, bui
 **Dataset:** [Kaggle — Telco Customer Churn 11-1-3](https://www.kaggle.com/datasets/alfathterry/telco-customer-churn-11-1-3)
 
 ---
+## Overview
+The project started with a simple goal to predict which telecom customers will churn.
+**The Trap** 
+Early on, Logistic Regression hit a ROC-AUC of ~1.00 on the validation set. Seeing a model learn something with almost complete accuracy made the things suspicious. Early on, on the numeric visulization part we had figured out satisfaction score being the best predictor of the churn. And training the data with the satisfaction score proved it to be true. 
+
+But, we wanted to make it more resilient, drop the satisfaction score, even if it was not mentioned to be a leakage column in the original dataset, and what I got after it was a, the AUC dropped to 0.91, which was much more reasonable to me.
+
+**Interesting part**
+The interesting part was when I decided to use XG Boost model, hypertune it with GRIDSearch CV to train the model, my ROC-AUC score got capped in 0.91, **the exact same as the simple basline. I got interested in it and first checked, whether the data was too linear?
+**Probability Correlation** of **0.957** showed model learned similar but different pattern, **925 trees used by XGBoost** showed that the model was not understrained and **40.5%** importance of top 3 features show that no single feature dominates, showing that it was not data being linear, but it was rather a performance ceiling with the remaining feature after removing **Satisfaction Score**
+
+---
 
 ##  Problem Statement
 
