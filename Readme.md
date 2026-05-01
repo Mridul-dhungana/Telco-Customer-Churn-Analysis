@@ -231,7 +231,7 @@ Logistic Regression was selected as the final model — not because the data is 
 
 ---
 
-## 🛠️ Requirements
+## Requirements
 
 ```
 pandas
@@ -244,7 +244,7 @@ kagglehub
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repo
 2. Install dependencies: `pip install pandas numpy matplotlib scikit-learn xgboost kagglehub`
