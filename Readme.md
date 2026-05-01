@@ -1,5 +1,3 @@
-<img width="923" height="390" alt="churn" src="https://github.com/user-attachments/assets/b6b44062-7db2-4f71-b4e1-6e80518b8ccd" />
-<img width="923" height="390" alt="churn" src="https://github.com/user-attachments/assets/be722609-a3f9-442c-8699-f8e6bce24f49" />
 <img width="200" height="200" alt="UTA-DataScience-Logo" src="https://github.com/user-attachments/assets/9431c15f-2f1a-4422-9857-4cf2deb36b8e" />
 
 
