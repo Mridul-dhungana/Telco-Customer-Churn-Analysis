@@ -218,11 +218,13 @@ Three metrics were investigated to understand why both models achieved identical
 
 **Conclusion:** 
 The data doesnot seem to be linear, rather both the models hit the same **performance ceiling of ~0.91** that exists in this dataset after removing Satisfaction Score. The remaining behavioral features collectively cap predictive power at ~0.91.
+
 ---
 
 ##  Final Model — Logistic Regression
 Logistic Regression was selected as the final model. It was not because the data was linear  but rather because it **matches XGBoost's performance** with far less complexity. It is 
 faster to train, deploy, cheaper to run and requires no hyperparameter tuning.
+
 ---
 
 ## Requirements
