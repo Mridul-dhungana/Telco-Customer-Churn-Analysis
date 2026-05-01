@@ -1,5 +1,5 @@
+<img width="200" height="200" alt="UTA-DataScience-Logo" src="https://github.com/user-attachments/assets/9431c15f-2f1a-4422-9857-4cf2deb36b8e" />
 
-/Users/mriduldhungana/Documents/secondsem/pythonfords2/DATA3402.Spring.2026/Kaggle project/UTA-DataScience-Logo.png
 
 # 📡 Telco Customer Churn Prediction
 
