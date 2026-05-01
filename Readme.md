@@ -6,13 +6,13 @@ A machine learning project to predict whether a telecom customer will churn, bui
 
 ---
 
-## 📌 Problem Statement
+##  Problem Statement
 
 Customer churn is one of the most costly problems in the telecom industry. This project builds a binary classification model to identify customers who are likely to leave — enabling the business to take proactive retention action before it's too late.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 telco-churn/
@@ -24,7 +24,7 @@ telco-churn/
 
 ---
 
-## 🔄 Pipeline Overview
+## Pipeline Overview
 
 ```
 Data Loading & Cleaning
@@ -48,7 +48,7 @@ Final Model Selection
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 | Property | Value |
 |---|---|
@@ -60,7 +60,7 @@ Final Model Selection
 
 ---
 
-## 🧹 Data Cleaning
+## Data Cleaning
 
 ### Columns Dropped
 
@@ -83,7 +83,7 @@ Final Model Selection
 
 ---
 
-## 🔍 Leakage Investigation — Satisfaction Score
+## Leakage Investigation — Satisfaction Score
 
 `Satisfaction Score` was investigated separately because it correlated very strongly with churn. A quick test proved it was a **post-event proxy** — a survey filled out after the customer had already decided to leave:
 
@@ -95,7 +95,7 @@ Final Model Selection
 
 ---
 
-## 📈 Exploratory Data Analysis
+## Exploratory Data Analysis
 
 ### Key Findings — Numeric Features
 
@@ -118,7 +118,7 @@ Final Model Selection
 
 ---
 
-## ⚙️ Modeling
+## Modeling
 
 ### Train / Validation / Test Split
 
@@ -185,7 +185,7 @@ XGBClassifier(
 
 ---
 
-## 🏆 Results
+## Results
 
 | Model | ROC-AUC |
 |---|---|
@@ -201,12 +201,12 @@ XGBClassifier(
 | 0.50 | Random guessing |
 | 0.70–0.80 | Acceptable |
 | 0.80–0.90 | Good |
-| **0.91** | **Strong ✅** |
+| **0.91** | **Strong** |
 | 0.95+ | Excellent |
 
 ---
 
-## 🔬 Why Do LR and XGBoost Perform the Same?
+## Why Do LR and XGBoost Perform the Same?
 
 Three metrics were investigated to understand why both models achieved identical AUC:
 
