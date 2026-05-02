@@ -35,6 +35,7 @@ telco-churn/
 ├── telco.ipynb          # Main notebook — full pipeline
 ├── telco.csv            # Dataset
 └── README.md
+|__ Other pictures
 ```
 
 ---
@@ -42,23 +43,23 @@ telco-churn/
 ## Pipeline Overview
 
 ```
-Data Loading & Cleaning
-        ↓
-Exploratory Data Analysis
-        ↓
-Leakage Investigation (Satisfaction Score)
-        ↓
-Train / Validation / Test Split  (70 / 15 / 15)
-        ↓
-Scaling  (fit on train only)
-        ↓
-Baseline — Logistic Regression
-        ↓
-XGBoost  (GridSearchCV + Early Stopping)
-        ↓
-Model Comparison & Investigation
-        ↓
-Final Model Selection
+1. Load the Data, explore it perform data cleaning
+        
+2. Exploratory Data Analysis
+        
+3. Leakage Investigation (Satisfaction Score)
+        
+4. Train / Validation / Test Split  (70 / 15 / 15)
+        
+5. Scaling  (fit on train only)
+        
+6. Baseline — Logistic Regression
+        
+7. XGBoost  (GridSearchCV + Early Stopping)
+        
+8. Model Comparison & Investigation
+        
+9. Final Model Selection
 ```
 
 ---
@@ -246,9 +247,7 @@ The data doesnot seem to be linear, rather both the models hit the same **perfor
 ---
 
 ##  Final Model — Logistic Regression
-
 <img width="789" height="590" alt="ROC_AUC" src="https://github.com/user-attachments/assets/3a1c09e3-8780-4797-9ef8-9e118dccfe4b" />
-
 Logistic Regression was selected as the final model. It was not because the data was linear  but rather because it **matches XGBoost's performance** with far less complexity. It is 
 faster to train, deploy, cheaper to run and requires no hyperparameter tuning.
 
