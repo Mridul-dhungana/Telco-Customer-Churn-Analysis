@@ -35,7 +35,7 @@ telco-churn/
 ├── telco.ipynb          # Main notebook — full pipeline
 ├── telco.csv            # Dataset
 └── README.md
-|__ Other pictures
+└──Other pictures
 ```
 
 ---
